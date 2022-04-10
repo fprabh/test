@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -20,35 +20,35 @@
             font-family: monospace;
             color: rgb(109, 94, 57);
         }
-        div{
-            font-size: 19px;
-            font-family: 'Courier New', Courier, monospace;
-        }
         img{
             image-rendering: optimizeQuality;
             
         }
         h2{
             font-size: 20px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana;
         }
         h3{
             font-size: 16px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana;
             color: rgb(106, 92, 35);
         }
-        a{
+        #TopLink{
             font-size: 14px;
-            font-family: 'Gill Sans';
+            font-family: Gill Sans;
             color: black;
             font-style:unset;
+        }
+        #NameTag{
+            font-size: 19px;
+            font-family: Courier;
         }
     </style>
 </head>
 <body>
     <span id="Top"></span>
-    <h1>PLC FINAL PROJECT</h1>
-    <img src="Main Photo.png" width="805" height="466" >
+    <h1>PLC FINAL&apos; PROJECT</h1>
+    <img src="Main_Photo.png" width="805" height="466" alt="Pictue of a circuit board">
     <div ID="NameTag">BY: PRABH DHALIWAL</div>
         <h2>Introduction</h2>
             <p>An Elevator control was introduced as the final project for PLC course. The goal of the project was to master PLC&apos;s using state methods and have a clear understanding of working of PLC&apos;s scan time, asynchronous updating etc. Biggest challenge was to simulate the operation of a real elevator using the available lab equipment. Thankfully, I was able to get as close as possible by having some extra features and fault detections.</p>
@@ -57,6 +57,6 @@
                 <p>When PLC goes to run mode during the first scan all states are set to 0, every floor call is cleared, emergency is cleared, Floor_Processing_Counter is set to 0 and initialization is performed. However if there were some faults from last time that were not cleared would remain be on until cleared.</p>
             <h3>Initialization</h3>
                 <p>Initialization can be done either by switching PLC from program to run mode or by pressing the reset button if a major fault or an emergency stop was pressed. During initialization elevator goes to the first floor regardless of any floor calls that were made during that time. Door does not open when elevator reaches first floor unless Door Open pushbutton is pressed or an emergency has occurred. If there where any floor calls made during initialization, it saves the call and goes directly to the called floor once it reaches first floor.</p>
-                <a href="#Top">Back To Top</a>
+                <a id="TopLink" href="#Top">Back To Top</a>
 </body>
 </html>
